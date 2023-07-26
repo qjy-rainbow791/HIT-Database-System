@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper">
+    <!--id是sql的唯一标识，resultType是类名（需要写出完整路径）-->
+    <select id="selectAllStudent" resultType="org.example.Student">
+        select * from student
+    </select>
+    <select id="selectAge" resultType="org.example.Student">
+        select * from student where Sage = #{id}
+    </select>
+</mapper>
